@@ -5,10 +5,15 @@
  */
 package com.Portafolio.ccm.Repository;
 
+import com.Portafolio.ccm.Entidad.Persona;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author KARINA
  */
-public interface IPersonaRepository {
+@Repository
+public interface IPersonaRepository extends JpaRepository <Persona,Long> {
     
 }
