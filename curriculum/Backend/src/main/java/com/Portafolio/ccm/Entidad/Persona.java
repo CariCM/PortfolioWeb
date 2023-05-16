@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.persistence.GeneratedValue;
 
 /**
  *
@@ -19,8 +20,7 @@ import javax.validation.constraints.Size;
 @Entity
 public class Persona {
     @Id
-    @GenerateValue(strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY )
     private Long id;
     @NotNull
     @Size(min = 1, max=50,message="no cumple con la longitud")
